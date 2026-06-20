@@ -1,0 +1,9 @@
+[project]
+name = "age-of-impunity-sim"
+version = "0.1.0"
+description = "The accountability chain: bottleneck migration, conservation of impunity, and the exposure-consequence gap for The Last Age of Impunity"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+]

@@ -1,0 +1,380 @@
+{
+  "params": {
+    "n": 6000,
+    "stages": [
+      "discovery",
+      "attribution",
+      "publication",
+      "prosecution",
+      "judgment",
+      "enforcement"
+    ],
+    "baseline": {
+      "discovery": 0.35,
+      "attribution": 0.45,
+      "publication": 0.5,
+      "prosecution": 0.45,
+      "judgment": 0.55,
+      "enforcement": 0.5
+    },
+    "kappa": 8.0,
+    "inst_cost": 0.6,
+    "evid_cost_pre": 0.5,
+    "evid_cost_post": 3.0,
+    "capture_floor": 0.12,
+    "budget": 1.4,
+    "seed": 90240
+  },
+  "bottleneck_migration": {
+    "sweep": [
+      {
+        "alpha": 0.0,
+        "binding_stage": "discovery",
+        "binding_is_institutional": false,
+        "stage_means": {
+          "discovery": 0.34754566101359147,
+          "attribution": 0.44683888770610836,
+          "publication": 0.49805963220700544,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 2,
+        "captured_institutional": 0
+      },
+      {
+        "alpha": 0.05,
+        "binding_stage": "discovery",
+        "binding_is_institutional": false,
+        "stage_means": {
+          "discovery": 0.3801683779629118,
+          "attribution": 0.474496943320803,
+          "publication": 0.5231566505966552,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.1,
+        "binding_stage": "discovery",
+        "binding_is_institutional": false,
+        "stage_means": {
+          "discovery": 0.41279109491223226,
+          "attribution": 0.5021549989354976,
+          "publication": 0.5482536689863049,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.15000000000000002,
+        "binding_stage": "discovery",
+        "binding_is_institutional": false,
+        "stage_means": {
+          "discovery": 0.4454138118615527,
+          "attribution": 0.5298130545501922,
+          "publication": 0.5733506873759546,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.2,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.4780365288108731,
+          "attribution": 0.5574711101648867,
+          "publication": 0.5984477057656044,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.25,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.5106592457601935,
+          "attribution": 0.5851291657795813,
+          "publication": 0.6235447241552541,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.30000000000000004,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.543281962709514,
+          "attribution": 0.6127872213942759,
+          "publication": 0.6486417425449038,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.35000000000000003,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.5759046796588344,
+          "attribution": 0.6404452770089705,
+          "publication": 0.6737387609345535,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.4,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.6085273966081548,
+          "attribution": 0.6681033326236651,
+          "publication": 0.6988357793242032,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.45,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.6411501135574753,
+          "attribution": 0.6957613882383596,
+          "publication": 0.7239327977138531,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.5,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.6737728305067956,
+          "attribution": 0.7234194438530542,
+          "publication": 0.7490298161035027,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.55,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.7063955474561162,
+          "attribution": 0.7510774994677488,
+          "publication": 0.7741268344931526,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.6000000000000001,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.7390182644054366,
+          "attribution": 0.7787355550824435,
+          "publication": 0.7992238528828022,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.65,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.771640981354757,
+          "attribution": 0.8063936106971379,
+          "publication": 0.8243208712724519,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.7000000000000001,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.8042636983040775,
+          "attribution": 0.8340516663118327,
+          "publication": 0.8494178896621016,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.75,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.8368864152533979,
+          "attribution": 0.861709721926527,
+          "publication": 0.8745149080517512,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.8,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.8695091322027183,
+          "attribution": 0.8893677775412218,
+          "publication": 0.8996119264414012,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.8500000000000001,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.9021318491520387,
+          "attribution": 0.9170258331559162,
+          "publication": 0.9247089448310507,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.9,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.9347545661013592,
+          "attribution": 0.9446838887706109,
+          "publication": 0.9498059632207005,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 0.9500000000000001,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 0.9673772830506796,
+          "attribution": 0.9723419443853055,
+          "publication": 0.9749029816103504,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      },
+      {
+        "alpha": 1.0,
+        "binding_stage": "prosecution",
+        "binding_is_institutional": true,
+        "stage_means": {
+          "discovery": 1.0,
+          "attribution": 1.0,
+          "publication": 1.0,
+          "prosecution": 0.44778515022547494,
+          "judgment": 0.5476382147196827,
+          "enforcement": 0.5013372455909814
+        },
+        "captured_evidence": 0,
+        "captured_institutional": 2
+      }
+    ],
+    "binding_pre_ai": "discovery",
+    "binding_post_ai": "prosecution",
+    "institutional_ceiling": 0.12282853194427451,
+    "consequence_over_ceiling_pre_ai": 0.07786119588111035,
+    "consequence_over_ceiling_post_ai": 1.0
+  },
+  "conservation": {
+    "consequence_pre_ai": 0.009563576385502377,
+    "consequence_post_ai_no_capture": 0.12282853194427451,
+    "consequence_post_ai_with_capture": 0.007196473493036561,
+    "captured_stages": [
+      "judgment",
+      "prosecution"
+    ],
+    "evidence_gain": 0.11326495555877214,
+    "capture_absorbs": 0.11563205845123795,
+    "absorption_fraction": 1.02089881094102,
+    "net_change_vs_pre_ai": -0.002367102892465816,
+    "post_ai_no_capture_multiple_of_pre": 12.843368107612212
+  },
+  "exposure_gap": {
+    "exposure_pre_ai": 0.07757916679216847,
+    "consequence_pre_ai": 0.009563576385502377,
+    "exposure_post_ai": 1.0,
+    "consequence_post_ai": 0.007196473493036561,
+    "gap_pre_ai": 0.0680155904066661,
+    "gap_post_ai": 0.9928035265069635,
+    "gap_multiple": 14.596705263763472
+  },
+  "rights_symmetry": {
+    "adverse_outcome_accountable": 0.11306663573257543,
+    "adverse_outcome_captured": 0.7356497381068046,
+    "subject_harm_multiple": 6.506337907203316
+  }
+}
