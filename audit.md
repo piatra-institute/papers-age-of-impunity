@@ -20,3 +20,13 @@ Verification:
   - claims: 10 prose decimals, 0 without a matching results.json value.
   - build: 10 pages, 0 missing-character warnings.
   - check => PASS
+
+---
+
+## 2026-07-02 — reform pass (de-template + false-precision fix)
+
+Corpus reform (the weakest-link conservation result is the paper's transparent argument, not a hidden flaw; §4 states it as a structural property and §7 discloses the stipulation).
+
+- paper/PAPER.md §4: removed the false-precision "$102$ percent of it" (a stipulated-parameter artifact dressed as a measurement); now "the whole of the evidence gain and a little past it".
+- paper/PAPER.md §7: retitled "What the Model Settles, and What It Does Not" -> "The Machine Only Ever Finds" and reframed the limits-ledger opener into the disclosure-plus-argument, ending unchanged on courts-not-models. No number or citation changed.
+- Verify: voice 0 errors; refs 18/18, 0 missing/0 unused; claims 10/0 unmatched; check => PASS; synced.
