@@ -1,0 +1,232 @@
+# CSL references with stable IDs; cite with Pandoc [@id] syntax.
+# Migrated from the legacy inline bibliography. Entries with a DOI were resolved through doi.org
+# content negotiation (CSL-JSON) and checked for year and title; others were matched in Crossref
+# or entered by hand. Provenance per entry is in sources.md.
+references:
+- id: alstadsaeter2019
+  type: article-journal
+  title: Tax Evasion and Inequality
+  author:
+  - family: Alstadsæter
+    given: Annette
+  - family: Johannesen
+    given: Niels
+  - family: Zucman
+    given: Gabriel
+  container-title: American Economic Review
+  volume: '109'
+  issue: '6'
+  page: 2073-2103
+  DOI: 10.1257/aer.20172043
+  issued:
+    date-parts:
+    - - 2019
+- type: book
+  title: The Origins of Totalitarianism
+  author:
+  - family: Arendt
+    given: Hannah
+  edition: New
+  publisher: Harcourt Brace Jovanovich
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 1973
+  id: arendt1973
+- id: becker1968
+  type: article-journal
+  title: 'Crime and Punishment: An Economic Approach'
+  author:
+  - family: Becker
+    given: Gary S.
+  container-title: Journal of Political Economy
+  volume: '76'
+  issue: '2'
+  page: 169-217
+  DOI: 10.1086/259394
+  issued:
+    date-parts:
+    - - 1968
+- type: book
+  title: 'Between Truth and Power: The Legal Constructions of Informational Capitalism'
+  author:
+  - family: Cohen
+    given: Julie E.
+  publisher: Oxford University Press
+  publisher-place: New York
+  DOI: 10.1093/oso/9780190246693.001.0001
+  issued:
+    date-parts:
+    - - 2019
+  id: cohen2019
+- type: book
+  title: 'Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence'
+  author:
+  - family: Crawford
+    given: Kate
+  publisher: Yale University Press
+  publisher-place: New Haven
+  issued:
+    date-parts:
+    - - 2021
+  id: crawford2021
+- type: book
+  title: 'Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor'
+  author:
+  - family: Eubanks
+    given: Virginia
+  publisher: St. Martin's Press
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 2018
+  id: eubanks2018
+- type: book
+  title: 'Discipline and Punish: The Birth of the Prison'
+  author:
+  - family: Foucault
+    given: Michel
+  translator:
+  - family: Sheridan
+    given: Alan
+  publisher: Pantheon Books
+  publisher-place: New York
+  original-date:
+    date-parts:
+    - - 1975
+  issued:
+    date-parts:
+    - - 1977
+  id: foucault1977
+- id: icij2024
+  type: webpage
+  title: Panama Papers and FinCEN Files Investigations
+  author:
+  - literal: International Consortium of Investigative Journalists
+  container-title: ICIJ
+  URL: https://www.icij.org/investigations/
+  issued:
+    date-parts:
+    - - 2024
+- type: book
+  title: How Democracies Die
+  author:
+  - family: Levitsky
+    given: Steven
+  - family: Ziblatt
+    given: Daniel
+  publisher: Crown
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 2018
+  id: levitsky2018
+- id: mutz2018
+  type: article-journal
+  title: Status threat, not economic hardship, explains the 2016 presidential vote
+  author:
+  - family: Mutz
+    given: Diana C.
+  container-title: Proceedings of the National Academy of Sciences
+  volume: '115'
+  issue: '19'
+  DOI: 10.1073/pnas.1718155115
+  issued:
+    date-parts:
+    - - 2018
+  page: E4330-E4339
+- type: book
+  title: 'Algorithms of Oppression: How Search Engines Reinforce Racism'
+  author:
+  - family: Noble
+    given: Safiya Umoja
+  publisher: New York University Press
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 2018
+  id: noble2018
+- type: book
+  title: 'Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy'
+  author:
+  - family: O'Neil
+    given: Cathy
+  publisher: Crown
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 2016
+  id: oneil2016
+- type: book
+  title: 'The Audit Society: Rituals of Verification'
+  author:
+  - family: Power
+    given: Michael
+  publisher: Oxford University Press
+  publisher-place: Oxford
+  issued:
+    date-parts:
+    - - 1997
+  id: power1997
+- type: book
+  title: 'Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed'
+  author:
+  - family: Scott
+    given: James C.
+  publisher: Yale University Press
+  publisher-place: New Haven
+  issued:
+    date-parts:
+    - - 1998
+  id: scott1998
+- id: ti2025
+  type: report
+  title: Corruption Perceptions Index 2024
+  author:
+  - literal: Transparency International
+  publisher: Transparency International
+  publisher-place: Berlin
+  URL: https://www.transparency.org/en/cpi/2024
+  issued:
+    date-parts:
+    - - 2025
+- type: report
+  title: 'Democracy Report 2025: 25 Years of Autocratization – Democracy Trumped?'
+  author:
+  - family: Angiolillo
+    given: Fabio
+  - family: Good God
+    given: Ana
+  - family: Nord
+    given: Marina
+  - family: Lindberg
+    given: Staffan I.
+  publisher: V-Dem Institute, University of Gothenburg
+  publisher-place: Gothenburg
+  URL: https://www.v-dem.net/documents/61/v-dem-dr__2025_lowres_v2.pdf
+  issued:
+    date-parts:
+    - - 2025
+  id: vdem2025
+- id: wjp2024
+  type: report
+  title: World Justice Project Rule of Law Index 2024
+  author:
+  - literal: World Justice Project
+  publisher: World Justice Project
+  publisher-place: Washington, DC
+  URL: https://worldjusticeproject.org/rule-of-law-index/
+  issued:
+    date-parts:
+    - - 2024
+- type: book
+  title: 'The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power'
+  author:
+  - family: Zuboff
+    given: Shoshana
+  publisher: PublicAffairs
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 2019
+  id: zuboff2019

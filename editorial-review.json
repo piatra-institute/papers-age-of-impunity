@@ -1,10 +1,10 @@
 {
-  "manuscript_sha256": "bd54a5053bb4f6099eb787f0b93adfa86bc58b83f16e3b92353e47d381643a22",
+  "manuscript_sha256": "e2e4dd6b8376c3cdcb7f94626bfe89a65183a58839c9fb3deb33906015160833",
   "full_read": true,
   "argument_review": true,
   "structure_review": true,
   "voice_review": true,
   "source_review": true,
   "final_read": true,
-  "notes": "Prose revision: descriptive headings (Model, Results subsections, Limitations, Conclusion, Reproducibility); self-reference, reflexive contrasts, the seed reference and aphoristic closers removed; model parameters stated in the text; abstract cut from ~420 to 255 words; grid-artifact crossover and an overstated migration claim corrected; Figure 1 caption now matches the figure."
+  "notes": "Structured-evidence migration: inline bibliography converted to references.yaml (CSL) with Pandoc [@id] citations; claims.yaml ledger and execution receipt added. One factual correction: the Alstads\u00e6ter, Johannesen and Zucman citation now states what the article reports."
 }

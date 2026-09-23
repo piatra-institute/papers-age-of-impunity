@@ -1,0 +1,553 @@
+schema: 1
+coverage: reviewed
+reviewed_manuscript_sha256: e2e4dd6b8376c3cdcb7f94626bfe89a65183a58839c9fb3deb33906015160833
+claims:
+- id: abs-n
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /params/n
+    reported: 6,000
+    units: cases
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 0
+  passage: Over 6,000 simulated cases, three results follow.
+- id: abs-ratio-pre
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /bottleneck_migration/consequence_over_ceiling_pre_ai
+    reported: '0.078'
+    units: consequence as a fraction of the institutional ceiling
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: Before AI, consequence runs at 0.078 of the ceiling set by the institutional stages; with saturated
+    evidence it reaches that ceiling, and the stage with the lowest pass probability shifts from discovery
+    to prosecution at an AI capability of 0.15.
+- id: abs-crossover
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /bottleneck_migration/binding_crossover_alpha_exact
+    reported: '0.15'
+    units: AI capability alpha
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 2
+  passage: Before AI, consequence runs at 0.078 of the ceiling set by the institutional stages; with saturated
+    evidence it reaches that ceiling, and the stage with the lowest pass probability shifts from discovery
+    to prosecution at an AI capability of 0.15.
+- id: abs-pre
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /conservation/consequence_pre_ai
+    reported: '0.010'
+    units: mean probability of consequence
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: Cheaper evidence alone would raise the mean probability of consequence nearly thirteenfold,
+    from 0.010 to 0.123, but an elite that spends a fixed budget capturing prosecution and judgment returns
+    it to 0.007, slightly below the pre-AI level.
+- id: abs-post
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /conservation/consequence_post_ai_no_capture
+    reported: '0.123'
+    units: mean probability of consequence
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: Cheaper evidence alone would raise the mean probability of consequence nearly thirteenfold,
+    from 0.010 to 0.123, but an elite that spends a fixed budget capturing prosecution and judgment returns
+    it to 0.007, slightly below the pre-AI level.
+- id: abs-capture
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /conservation/consequence_post_ai_with_capture
+    reported: '0.007'
+    units: mean probability of consequence
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: Cheaper evidence alone would raise the mean probability of consequence nearly thirteenfold,
+    from 0.010 to 0.123, but an elite that spends a fixed budget capturing prosecution and judgment returns
+    it to 0.007, slightly below the pre-AI level.
+- id: abs-gap-pre
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /exposure_gap/gap_pre_ai
+    reported: '0.068'
+    units: exposure minus consequence
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: The gap between exposure and consequence widens about fifteenfold, from 0.068 to 0.993.
+- id: abs-gap-post
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /exposure_gap/gap_post_ai
+    reported: '0.993'
+    units: exposure minus consequence
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: The gap between exposure and consequence widens about fifteenfold, from 0.068 to 0.993.
+- id: abs-subject
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /rights_symmetry/subject_harm_multiple
+    reported: '6.5'
+    units: ratio of adverse-outcome probabilities
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 1
+  passage: Run in the opposite direction, as a state's automated case against a subject, the same chain
+    raises the probability of an adverse outcome 6.5-fold under capture.
+- id: stage-means-disc
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /params/baseline/discovery
+    reported: '0.35'
+    units: mean pass probability
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 2
+  passage: In the simulation, 6,000 cases each draw six stage probabilities from Beta distributions (concentration
+    8) with means 0.35, 0.45 and 0.50 for the evidence stages and 0.45, 0.55 and 0.50 for the institutional
+    stages.
+- id: stage-means-kappa
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /params/kappa
+    reported: '8'
+    units: Beta concentration
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 0
+  passage: In the simulation, 6,000 cases each draw six stage probabilities from Beta distributions (concentration
+    8) with means 0.35, 0.45 and 0.50 for the evidence stages and 0.45, 0.55 and 0.50 for the institutional
+    stages.
+- id: stage-means-n
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /params/n
+    reported: 6,000
+    units: cases
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 0
+  passage: In the simulation, 6,000 cases each draw six stage probabilities from Beta distributions (concentration
+    8) with means 0.35, 0.45 and 0.50 for the evidence stages and 0.45, 0.55 and 0.50 for the institutional
+    stages.
+- id: budget
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /params/budget
+    reported: '1.4'
+    units: capture budget
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 1
+  passage: A self-protective elite holds a capture budget of 1.4 and captures stages cheapest first, driving
+    each captured stage to a floor of 0.12.
+- id: floor
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /params/capture_floor
+    reported: '0.12'
+    units: captured stage pass probability
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 2
+  passage: A self-protective elite holds a capture budget of 1.4 and captures stages cheapest first, driving
+    each captured stage to a floor of 0.12.
+- id: inst-cost
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /params/inst_cost
+    reported: '0.6'
+    units: capture cost
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 1
+  passage: An institutional stage costs 0.6 to capture; an evidence stage costs 0.5 when evidence is scarce
+    and centralized and rises linearly to 3.0 at $\alpha = 1$, when evidence is distributed.
+- id: evid-cost-post
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /params/evid_cost_post
+    reported: '3.0'
+    units: capture cost at alpha = 1
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 1
+  passage: An institutional stage costs 0.6 to capture; an evidence stage costs 0.5 when evidence is scarce
+    and centralized and rises linearly to 3.0 at $\alpha = 1$, when evidence is distributed.
+- id: ceiling
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /bottleneck_migration/institutional_ceiling
+    reported: '0.123'
+    units: product of institutional stage means
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: In the simulated population the ceiling is 0.123.
+- id: ratio-pre
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /bottleneck_migration/consequence_over_ceiling_pre_ai
+    reported: '0.078'
+    units: fraction of ceiling
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: 'Before AI the mean probability of consequence is 0.078 of that ceiling: the institutions could
+    convert far more than they receive, because evidence rarely reaches them.'
+- id: crossover
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /bottleneck_migration/binding_crossover_alpha_exact
+    reported: '0.15'
+    units: alpha
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 2
+  passage: The stage with the lowest mean pass probability changes from discovery to prosecution at $\alpha
+    = 0.15$ (closed form 0.154, since stage means are linear in $\alpha$).
+- id: crossover-exact
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /bottleneck_migration/binding_crossover_alpha_exact
+    reported: '0.154'
+    units: alpha, closed form
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: The stage with the lowest mean pass probability changes from discovery to prosecution at $\alpha
+    = 0.15$ (closed form 0.154, since stage means are linear in $\alpha$).
+- id: ratio-at-crossover
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /bottleneck_migration/consequence_over_ceiling_at_binding_crossover
+    reported: '0.14'
+    units: fraction of ceiling
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 2
+  passage: At that point the product is still only 0.14 of the ceiling, because the evidence stages continue
+    to multiply it down; the remaining gain accrues gradually as all three evidence stages approach one.
+- id: capture-crossover
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /bottleneck_migration/capture_crossover_alpha_exact
+    reported: '0.04'
+    units: alpha
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 2
+  passage: In the model the budget switches from two evidence stages to prosecution and judgment once
+    an evidence stage costs more than an institutional one, at $\alpha = 0.04$.
+- id: pre
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /conservation/consequence_pre_ai
+    reported: '0.010'
+    units: mean probability of consequence
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: Before AI the mean probability of consequence is 0.010.
+- id: post
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /conservation/consequence_post_ai_no_capture
+    reported: '0.123'
+    units: mean probability of consequence
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: If AI raises the evidence stages without any capture, consequence rises to 0.123, 12.8 times
+    higher.
+- id: multiple
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /conservation/post_ai_no_capture_multiple_of_pre
+    reported: '12.8'
+    units: ratio
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 1
+  passage: If AI raises the evidence stages without any capture, consequence rises to 0.123, 12.8 times
+    higher.
+- id: with-capture
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /conservation/consequence_post_ai_with_capture
+    reported: '0.007'
+    units: mean probability of consequence
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: If the elite captures the new bottleneck, consequence falls to 0.007, slightly below the pre-AI
+    level; capture absorbs 102 percent of the evidence gain (Figure 2).
+- id: absorbs
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /conservation/absorption_fraction
+    reported: '102'
+    units: percent of the evidence gain absorbed
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 0
+    scale: 100
+  passage: If the elite captures the new bottleneck, consequence falls to 0.007, slightly below the pre-AI
+    level; capture absorbs 102 percent of the evidence gain (Figure 2).
+- id: gap-pre
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /exposure_gap/gap_pre_ai
+    reported: '0.068'
+    units: exposure minus consequence
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: Before AI both are small, and the gap between them is 0.068.
+- id: gap-post
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /exposure_gap/gap_post_ai
+    reported: '0.993'
+    units: exposure minus consequence
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: After AI, with rational capture, exposure reaches one while consequence stays at 0.007, and
+    the gap widens to 0.993, 14.6 times its earlier size (Figure 3).
+- id: gap-multiple
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /exposure_gap/gap_multiple
+    reported: '14.6'
+    units: ratio
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 1
+  passage: After AI, with rational capture, exposure reaches one while consequence stays at 0.007, and
+    the gap widens to 0.993, 14.6 times its earlier size (Figure 3).
+- id: gap-capture
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /exposure_gap/consequence_post_ai
+    reported: '0.007'
+    units: mean probability of consequence
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: After AI, with rational capture, exposure reaches one while consequence stays at 0.007, and
+    the gap widens to 0.993, 14.6 times its earlier size (Figure 3).
+- id: subject-acc
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /rights_symmetry/adverse_outcome_accountable
+    reported: '0.113'
+    units: probability
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: In the model, a subject's probability of an adverse automated outcome rises from 0.113 under
+    an accountable configuration to 0.736 under a captured one, a factor of 6.5.
+- id: subject-cap
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /rights_symmetry/adverse_outcome_captured
+    reported: '0.736'
+    units: probability
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: In the model, a subject's probability of an adverse automated outcome rises from 0.113 under
+    an accountable configuration to 0.736 under a captured one, a factor of 6.5.
+- id: subject-mult
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /rights_symmetry/subject_harm_multiple
+    reported: '6.5'
+    units: ratio
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 1
+  passage: In the model, a subject's probability of an adverse automated outcome rises from 0.113 under
+    an accountable configuration to 0.736 under a captured one, a factor of 6.5.
+- id: lim-values
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /conservation/consequence_pre_ai
+    reported: '0.010'
+    units: mean probability of consequence
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: The values 0.010 and 0.123 and the fifteenfold gap are properties of a stipulated chain chosen
+    for transparency, and the model predicts no specific trial.
+- id: lim-values-post
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /conservation/consequence_post_ai_no_capture
+    reported: '0.123'
+    units: mean probability of consequence
+    conditions: 6,000 simulated cases, Beta stage draws (concentration 8), capture budget 1.4; seed 90240
+    decimals: 3
+  passage: The values 0.010 and 0.123 and the fifteenfold gap are properties of a stipulated chain chosen
+    for transparency, and the model predicts no specific trial.
+- id: mutz-status
+  kind: source
+  evidence:
+    citation_id: mutz2018
+    locator: Significance statement
+    verified: true
+    verification_note: 'DOI 10.1073/pnas.1718155115; Crossref significance statement: change in financial
+      wellbeing had little impact on 2016 candidate preference; changing preferences tracked issues threatening
+      dominant-group status.'
+  passage: 'The movements the thesis names were largely formed before generative AI reached its present
+    capabilities, and their support is well explained by other forces: status threat, in the most carefully
+    studied case, outweighs personal economic hardship [@mutz2018], alongside nationalism, religious mobilization,
+    demographic anxiety, the collapse of local media and the ordinary preference of those in power for
+    fewer constraints.'
+- id: fincen-88
+  kind: source
+  evidence:
+    citation_id: icij2024
+    locator: About the FinCEN Files investigation (icij.org)
+    verified: true
+    verification_note: 'ICIJ page retrieved: ICIJ with BuzzFeed News and 108 other media partners in 88
+      countries organized and analyzed the FinCEN Files.'
+  passage: 'The offshore leaks and cross-border investigations demonstrate the capability: the FinCEN
+    Files joined reporters in 88 countries, and leaked customer lists of offshore institutions, matched
+    to administrative wealth records, show that the richest 0.01 percent of households evade about a quarter
+    of their taxes [@alstadsaeter2019; @icij2024].'
+- id: ajz-evasion
+  kind: source
+  evidence:
+    citation_id: alstadsaeter2019
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1257/aer.20172043; Crossref abstract: leaked offshore customer lists matched
+      to Scandinavian wealth records show the 0.01 percent richest households evade about 25 percent of
+      their taxes.'
+  passage: 'The offshore leaks and cross-border investigations demonstrate the capability: the FinCEN
+    Files joined reporters in 88 countries, and leaked customer lists of offshore institutions, matched
+    to administrative wealth records, show that the richest 0.01 percent of households evade about a quarter
+    of their taxes [@alstadsaeter2019; @icij2024].'
+- id: vdem-2025
+  kind: source
+  evidence:
+    citation_id: vdem2025
+    locator: Key findings
+    verified: true
+    verification_note: 'Report PDF retrieved from v-dem.net: almost 40% of the world population (3.1 billion)
+      live in autocratizing countries; dozens of autocratizers listed.'
+  passage: V-Dem counts dozens of autocratizing states containing a large share of the world's population,
+    the World Justice Project reports declines in oversight, checks on executive power and freedom of
+    expression in most countries, and Transparency International places most jurisdictions below the midpoint
+    of its scale [@vdem2025; @wjp2024; @ti2025].
+- id: ti-cpi
+  kind: source
+  evidence:
+    citation_id: ti2025
+    locator: CPI 2024 results page
+    verified: true
+    verification_note: 'transparency.org/en/cpi/2024 retrieved: over two-thirds of countries score below
+      50 on the 0-100 scale.'
+  passage: V-Dem counts dozens of autocratizing states containing a large share of the world's population,
+    the World Justice Project reports declines in oversight, checks on executive power and freedom of
+    expression in most countries, and Transparency International places most jurisdictions below the midpoint
+    of its scale [@vdem2025; @wjp2024; @ti2025].
+- id: chain-def
+  kind: definition
+  rationale: Defines the accountability chain as a product of six stage probabilities.
+  passage: The probability that an act of type $m$ ends in a consequence is the product of the stage pass
+    probabilities,
+- id: stage-groups
+  kind: assumption
+  rationale: 'Modelling assumption: AI lifts only the evidence stages; the institutional stages are human
+    and capturable and unchanged by alpha.'
+  passage: No model performs them.
+- id: illustrative
+  kind: assumption
+  rationale: Stage means, costs, floor and budget are stipulated; the results are properties of the stipulated
+    chain.
+  passage: All magnitudes are illustrative.
+- id: conservation
+  kind: interpretation
+  rationale: 'Follows from the bound values: with capture the post-AI consequence (0.007) ends at or below
+    the pre-AI level (0.010).'
+  passage: 'Impunity is conserved: the evidence gain occurs and the probability of consequence ends where
+    it began.'
+- id: weakest-link
+  kind: interpretation
+  rationale: 'Structural argument from the product form: gains at uncontrolled links are absorbed at a
+    controllable link.'
+  passage: The conservation follows from the structure of the chain.
+- id: thirteenfold
+  kind: interpretation
+  rationale: '''Nearly thirteenfold'' states the bound multiple 12.8 (results.json /conservation/post_ai_no_capture_multiple_of_pre
+    = 12.84).'
+  passage: Cheaper evidence alone would raise the mean probability of consequence nearly thirteenfold,
+    from 0.010 to 0.123, but an elite that spends a fixed budget capturing prosecution and judgment returns
+    it to 0.007, slightly below the pre-AI level.
+- id: fifteenfold
+  kind: interpretation
+  rationale: '''About fifteenfold'' states the bound multiple 14.6 (results.json /exposure_gap/gap_multiple).'
+  passage: The gap between exposure and consequence widens about fifteenfold, from 0.068 to 0.993.
+- id: strong-thesis-false
+  kind: interpretation
+  rationale: The model does not bear on motives; the rejection of the anticipatory-counterrevolution thesis
+    rests on chronology and the cited evidence on status threat.
+  passage: The results do not support the strong thesis.
+- id: institutional-remedy
+  kind: normative
+  rationale: Normative conclusion from the bottleneck result.
+  passage: 'The remaining work is institutional: independent prosecutors, courts insulated from capture
+    and enforcement that binds the strong.'
+runs:
+- id: model
+  required: true
+  record: verification/model.json

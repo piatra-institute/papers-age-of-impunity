@@ -1,0 +1,167 @@
+[
+ {
+  "id": "alstadster2019",
+  "families": [
+   "Alstadsæter",
+   "Johannesen",
+   "Zucman"
+  ],
+  "authors_text": "Alstadsæter, A., Johannesen, N., and Zucman, G.",
+  "year": "2019",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "arendt1973",
+  "families": [
+   "Arendt"
+  ],
+  "authors_text": "Arendt, H.",
+  "year": "1973",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "becker1968",
+  "families": [
+   "Becker"
+  ],
+  "authors_text": "Becker, G. S.",
+  "year": "1968",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "cohen2019",
+  "families": [
+   "Cohen"
+  ],
+  "authors_text": "Cohen, J. E.",
+  "year": "2019",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "crawford2021",
+  "families": [
+   "Crawford"
+  ],
+  "authors_text": "Crawford, K.",
+  "year": "2021",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "eubanks2018",
+  "families": [
+   "Eubanks"
+  ],
+  "authors_text": "Eubanks, V.",
+  "year": "2018",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "foucault1977",
+  "families": [
+   "Foucault"
+  ],
+  "authors_text": "Foucault, M.",
+  "year": "1977",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "international2024",
+  "families": [
+   "International Consortium of Investigative Journalists."
+  ],
+  "authors_text": "International Consortium of Investigative Journalists.",
+  "year": "2024",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "levitsky2018",
+  "families": [
+   "Levitsky",
+   "Ziblatt"
+  ],
+  "authors_text": "Levitsky, S., and Ziblatt, D.",
+  "year": "2018",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "mutz2018",
+  "families": [
+   "Mutz"
+  ],
+  "authors_text": "Mutz, D. C.",
+  "year": "2018",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "noble2018",
+  "families": [
+   "Noble"
+  ],
+  "authors_text": "Noble, S. U.",
+  "year": "2018",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "oneil2016",
+  "families": [
+   "O'Neil"
+  ],
+  "authors_text": "O'Neil, C.",
+  "year": "2016",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "power1997",
+  "families": [
+   "Power"
+  ],
+  "authors_text": "Power, M.",
+  "year": "1997",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "scott1998",
+  "families": [
+   "Scott"
+  ],
+  "authors_text": "Scott, J. C.",
+  "year": "1998",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "transparency2025",
+  "families": [
+   "Transparency International."
+  ],
+  "authors_text": "Transparency International.",
+  "year": "2025",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "vdem2025",
+  "families": [
+   "V-Dem Institute."
+  ],
+  "authors_text": "V-Dem Institute.",
+  "year": "2025",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "world2024",
+  "families": [
+   "World Justice Project."
+  ],
+  "authors_text": "World Justice Project.",
+  "year": "2024",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "zuboff2019",
+  "families": [
+   "Zuboff"
+  ],
+  "authors_text": "Zuboff, S.",
+  "year": "2019",
+  "status": "VERIFIED-CROSSREF"
+ }
+]

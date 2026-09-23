@@ -2,6 +2,17 @@
 
 Dated log of editorial passes and verification runs. Newest first.
 
+## 2026-09-23 — structured-evidence migration
+
+Structured-evidence migration (references and claims).
+- references.yaml: 18 CSL entries. 3 matched through Crossref and checked for year and title (alstadsaeter2019, becker1968, mutz2018); 15 entered by hand (arendt1973, cohen2019 with its monograph DOI, crawford2021, eubanks2018, foucault1977, icij2024, levitsky2018, noble2018, oneil2016, power1997, scott1998, ti2025, vdem2025, wjp2024, zuboff2019). In-text author-year citations converted to Pandoc [@id] syntax; the legacy list replaced by the citeproc-rendered list (Chicago author-date). Ids renamed: alstadster2019 -> alstadsaeter2019, international2024 -> icij2024, transparency2025 -> ti2025, world2024 -> wjp2024. Mutz page range completed (E4330-E4339).
+- Bibliographic corrections: the Crossref match for zuboff2019 was a book review (Shandler, Journal of Cyber Policy) and was replaced by the PublicAffairs book; vdem2025 carries its subtitle and authors from the report PDF (Angiolillo, Good God, Nord and Lindberg), so the citation renders as Angiolillo et al. (2025) in place of V-Dem Institute (2025).
+- Prose correction: "automatic international exchange of bank information has been estimated to close most of the offshore tax gap it covers" -> "leaked customer lists of offshore institutions, matched to administrative wealth records, show that the richest 0.01 percent of households evade about a quarter of their taxes" (the AER abstract reports the latter and not the former).
+- claims.yaml: 50 claims (36 computation, 5 source, 1 definition, 2 assumption, 5 interpretation, 1 normative). Every modelled number in the abstract, Sections 2-4 and the limitations is bound to simulation/output/results.json under run id model; "nearly thirteenfold" and "about fifteenfold" are bound as interpretations of the bound multiples 12.8 and 14.6. Source claims checked: mutz2018 (significance statement), alstadsaeter2019 (abstract), icij2024 (FinCEN Files about page: partners in 88 countries), vdem2025 (report key findings: almost 40 percent of world population in autocratizing countries), ti2025 (CPI 2024 page: over two-thirds of countries below 50).
+- Unverified, not bound: the 2024 Panama money-laundering trial acquitting all 28 defendants (ICIJ page not located through the site; the fact is widely reported but was not re-checked here); the World Justice Project declines (report page not machine-readable); Becker's deterrence condition; the humanities and policy books (Arendt, Levitsky and Ziblatt, Foucault, Eubanks, O'Neil, Noble, Scott, Crawford, Zuboff, Cohen, Power).
+- Run: model (uv run python run_all.py, seed 90240); results.json and the three figures reproduced byte for byte.
+- metadata claims_target: claim-ledger.
+
 ## 2026-09-23 — prose revision
 
 Prose rewritten against the house standards. Headings: 1. Introduction; 2. Model: the accountability chain; 3. Results (3.1 Migration of the bottleneck; 3.2 Conservation of impunity; 3.3 Exposure without consequence; 3.4 The chain applied to subjects of the state); 4. Limitations; 5. Conclusion; Reproducibility (new). Tics: "rather than" 4 -> 0, negate-pivots 4 -> 0, "not X but Y" 8 -> 0, "this paper" 4 -> 0, "exactly/precisely" 4 -> 0.
