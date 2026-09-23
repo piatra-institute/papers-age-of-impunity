@@ -32,6 +32,21 @@ def main() -> None:
     print(f"  institutional ceiling         : {m['institutional_ceiling']:.4f}")
     print(f"  consequence/ceiling pre AI    : {m['consequence_over_ceiling_pre_ai']:.3f}")
     print(f"  consequence/ceiling post AI   : {m['consequence_over_ceiling_post_ai']:.3f}")
+    print(f"  binding crossover alpha exact : {m['binding_crossover_alpha_exact']:.4f} (grid {m['binding_crossover_alpha_grid']:.2f})")
+    print(f"  capture crossover alpha exact : {m['capture_crossover_alpha_exact']:.4f}")
+    checks = {
+        "binding_crossover_inside_grid_step":
+            m["binding_crossover_alpha_grid"] - 0.05 < m["binding_crossover_alpha_exact"]
+            <= m["binding_crossover_alpha_grid"],
+        "capture_crossover_between_first_grid_points":
+            m["sweep"][0]["captured_evidence"] > 0 and m["sweep"][1]["captured_evidence"] == 0
+            and 0.0 < m["capture_crossover_alpha_exact"] < 0.05,
+        "post_ai_consequence_equals_ceiling":
+            abs(m["consequence_over_ceiling_post_ai"] - 1.0) < 1e-12,
+    }
+    for k, v in checks.items():
+        print(f"  check {k:<44}: {'PASS' if v else 'FAIL'}")
+    assert all(checks.values()), checks
     print("CONSERVATION OF IMPUNITY")
     print(f"  consequence pre-AI            : {c['consequence_pre_ai']:.4f}")
     print(f"  consequence post-AI no capture: {c['consequence_post_ai_no_capture']:.4f} "

@@ -1,0 +1,17 @@
+{
+  "pdf_sha256": "fd17b5bd55050cda6e5d4e9fa1b0b861f8a48f1a506438f0bec48c0d3bfb2c5b",
+  "page_count": 9,
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "all_pages_inspected": true,
+  "notes": "All 9 pages inspected after the prose revision; figure titles replaced with descriptive ones, the migration figure given the consequence/ceiling panel its caption described, and the conservation figure's overlapping arrow and label removed. Metadata-only rebuild: the web blurb in metadata.yaml, a hashed build input, changed, so the PDF was re-rendered (96eebff66ffa to fd17b5bd5505); the rendered text is byte-for-byte identical and no page was re-inspected."
+}

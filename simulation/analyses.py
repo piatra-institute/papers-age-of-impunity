@@ -129,6 +129,10 @@ def _optimal_capture(cases: dict, alpha: float, budget: float = BUDGET) -> set:
 def bottleneck_migration() -> dict:
     cases = make_cases()
     alphas = np.linspace(0.0, 1.0, 21)
+    inst_prod = np.ones(N)
+    for s in INSTITUTIONAL:
+        inst_prod = inst_prod * cases["p"][s]
+    ceiling0 = float(inst_prod.mean())
     sweep = []
     for a in alphas:
         sp = _stage_probs(cases, float(a), set())
@@ -138,6 +142,7 @@ def bottleneck_migration() -> dict:
         cap_evidence = len(cap & set(EVIDENCE))
         cap_inst = len(cap & set(INSTITUTIONAL))
         sweep.append({"alpha": float(a), "binding_stage": binding,
+                      "consequence_over_ceiling": float(_consequence(sp).mean() / ceiling0),
                       "binding_is_institutional": binding in INSTITUTIONAL,
                       "stage_means": means,
                       "captured_evidence": cap_evidence,
@@ -153,7 +158,23 @@ def bottleneck_migration() -> dict:
     # how close consequence sits to the institutional ceiling: evidence is the
     # binding constraint when this ratio is far below one, the institution is the
     # binding constraint when it is near one
+    # Exact crossovers (the sweep is a 0.05 grid). Stage means are linear in
+    # alpha under the lift p -> p + alpha (1 - p), so the binding stage becomes
+    # institutional at the alpha where the last evidence mean reaches the lowest
+    # institutional mean.
+    m0 = {s: float(cases["p"][s].mean()) for s in STAGES}
+    inst_min = min(m0[s] for s in INSTITUTIONAL)
+    binding_cross = max(max(0.0, (inst_min - m0[s]) / (1.0 - m0[s])) for s in EVIDENCE)
+    # capture migrates when an evidence stage stops being cheaper than an
+    # institutional one: EVID_COST_PRE + alpha (POST - PRE) = INST_COST
+    capture_cross = (INST_COST - EVID_COST_PRE) / (EVID_COST_POST - EVID_COST_PRE)
+    first_inst_grid = next(r["alpha"] for r in sweep if r["binding_is_institutional"])
     return {
+        "binding_crossover_alpha_exact": binding_cross,
+        "binding_crossover_alpha_grid": first_inst_grid,
+        "consequence_over_ceiling_at_binding_crossover": float(
+            _consequence(_stage_probs(cases, binding_cross, set())).mean() / ceiling0),
+        "capture_crossover_alpha_exact": capture_cross,
         "sweep": sweep,
         "binding_pre_ai": sweep[0]["binding_stage"],
         "binding_post_ai": sweep[-1]["binding_stage"],

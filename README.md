@@ -1,6 +1,6 @@
-# age-of-impunity
+# The Last Age of Impunity?
 
-A provocative thesis reads the authoritarian turn as an anticipatory counterrevolution against a near future in which AI and computational audit make impunity impossible to maintain. The strong form fails (the movements predate the technology; motives are multicausal), but a narrow mechanism survives, and this paper prices it. Whether a wrongful act meets a consequence is the product of an accountability chain (discovery x attribution x publication x prosecution x judgment x enforcement), and a product is bounded by its weakest term. AI raises the evidence stages toward one but not the institutional, capturable ones. The model yields a conservation law: cheaper evidence would multiply consequence ~13x, but a self-protective elite rationally captures the new bottleneck (prosecution, judgment) and absorbs the entire gain, so impunity is conserved, relocated from evidence to adjudication rather than ended. Exposure decouples from consequence (everything becomes knowable, almost nothing follows, the Panama Papers pattern), and the same chain turned downward harms the weak about sixfold. The age AI inaugurates is not the last age of impunity but the age of impunity made visible, and what to do about it is a question about courts, not models. Ships a runnable simulation whose output carries every modelled number.
+One reading of the present authoritarian and plutocratic turn treats it as an anticipatory counterrevolution against a near future in which AI, open-source investigation, automated translation and computational audit make impunity impossible. The strong form fails: the movements predate the technology and are explained by status threat, nationalism, elite economic interest and institutional weakness. A narrower mechanism remains, and we model it. The probability that a wrongful act meets a consequence is the product of six stage probabilities (discovery, attribution, publication, prosecution, independent judgment and enforcement), so it is bounded by its weakest term. Generative AI raises the three evidence stages toward one and leaves the three institutional stages, which are human and capturable, unchanged. Over 6,000 simulated cases, three results follow. Before AI, consequence runs at 0.078 of the ceiling set by the institutional stages; with saturated evidence it reaches that ceiling, and the stage with the lowest pass probability shifts from discovery to prosecution at an AI capability of 0.15. Cheaper evidence alone would raise the mean probability of consequence nearly thirteenfold, from 0.010 to 0.123, but an elite that spends a fixed budget capturing prosecution and judgment returns it to 0.007, slightly below the pre-AI level. The gap between exposure and consequence widens about fifteenfold, from 0.068 to 0.993. Run in the opposite direction, as a state's automated case against a subject, the same chain raises the probability of an adverse outcome 6.5-fold under capture. AI thus makes impunity visible without ending it, and the remaining constraint lies in courts and enforcement.
 
 ## Build
 
@@ -8,8 +8,6 @@ A provocative thesis reads the authoritarian turn as an anticipatory counterrevo
 uv run build.py          # -> paper/PAPER.pdf  (vendored canonical recipe)
 ```
 
-Requires `pandoc` and `xelatex` on PATH. From the workspace you can also run
-`papers build age-of-impunity`.
+Requires `pandoc` and `xelatex` on PATH. From the workspace you can also run `papers build age-of-impunity`.
 
-Part of [piatra-papers](https://github.com/piatra-institute). See the workspace
-docs for the research and writing pipelines.
+Part of [piatra-papers](https://github.com/piatra-institute). See the workspace docs for the research and writing pipelines.
